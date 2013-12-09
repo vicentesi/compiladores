@@ -1,0 +1,47 @@
+JavaX   = "program" identifier {ConstDecl | VarDecl | ClassDecl}  "{" {MethodDecl} "}".
+
+ConstDecl  = "final" Type identifier "=" (number | charConst) ";".
+
+VarDecl    = Type identifier {"," identifier } ";".
+
+ClassDecl  = "class" identifier "{" {VarDecl} "}".
+
+MethodDecl = (Type | "void") identifier "(" [FormPars] ")" {VarDecl} Block.
+
+FormPars   = Type identifier {"," Type identifier}.
+
+Type       = identifier ["[" "]"].
+
+Block      = "{" {Statement} "}".
+
+Statement  = Designator ("=" Expr | ActPars) ";"
+          | "if" "(" Condition ")" Statement ["else" Statement]
+          | "while" "(" Condition ")" Statement
+          | "return" [Expr] ";"
+          | "read" "(" Designator ")" ";"
+          | "print" "(" Expr ["," number] ")" ";"
+          | Block
+          |";".
+
+ActPars    = "(" [ Expr {"," Expr} ] ")".
+
+Condition  = Expr Relop Expr.
+
+Relop      = "==" | "!=" | ">" | ">=" | "<" | "<=".
+
+Expr       = ["-"] Term {Addop Term}.
+
+Term       = Factor {Mulop Factor}.
+
+Factor     = Designator [ActPars]
+          | number
+          | charConst
+          | "new" identifier ["[" Expr "]"]
+          | "(" Expr ")".
+
+Designator = identifier {"." identifier | "[" Expr "]"}.
+
+Addop      = "+" | "-".
+
+Mulop =      "*" | "/" | "%".
+

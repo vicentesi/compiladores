@@ -1,0 +1,12 @@
+class T {
+	
+	class V {
+
+		T v;
+
+		void setV(T v)
+		{
+			v = v;
+		}
+	}
+}

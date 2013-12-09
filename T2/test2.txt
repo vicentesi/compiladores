@@ -1,0 +1,13 @@
+class Test2{
+	
+	int testing(Test2 t, Test2 t1)
+	{
+		if(t == 0)
+		{
+			return 1;
+		}
+		else{
+			return 0;
+		}
+	}
+}

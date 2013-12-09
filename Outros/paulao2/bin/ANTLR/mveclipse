@@ -1,0 +1,8 @@
+#!/bin/bash
+
+GRAMMAR=../Compilador
+
+java -jar antlr-3.2.jar $GRAMMAR/Fast.g -o $GRAMMAR
+
+
+

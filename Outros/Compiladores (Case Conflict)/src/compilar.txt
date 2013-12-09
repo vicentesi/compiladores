@@ -1,0 +1,4 @@
+javac -cp ../../antlrworks-1.4.3.jar:./ -d classes/ *.java
+
+/usr/lib/jvm/java-7-oracle/bin/java -cp ../../antlr-3.4-complete.jar:. Compilador.__Test__
+

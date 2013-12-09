@@ -1,0 +1,17 @@
+class T {
+	
+	void teste(int a){
+		int b;
+	}
+	
+	void test2(int c){
+		print "teste2";
+	}
+	
+}
+
+
+class F {
+	int c;	
+}
+

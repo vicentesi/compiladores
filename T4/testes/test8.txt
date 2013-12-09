@@ -1,0 +1,10 @@
+class Test {
+	int ^;
+	
+	void test(){
+		i = 0;
+	}
+}
+
+
+

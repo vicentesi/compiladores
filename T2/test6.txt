@@ -1,0 +1,12 @@
+class Test {
+	int i;
+	int class;
+
+	void test(){
+
+		i = 5;
+		class = 3;
+		
+	}
+
+}

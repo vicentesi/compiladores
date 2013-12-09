@@ -1,0 +1,3 @@
+- Gramatica utilizada para gerar o lexer;
+- Código gerado pela ferramenta;
+- Exemplos de programa com e sem erros, abrangendo os principais problemas da linguagem
